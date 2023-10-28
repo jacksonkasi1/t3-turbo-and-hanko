@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           <div className="flex h-[60vh] justify-center overflow-y-scroll px-4 text-2xl">
             {postQuery.data ? (
               <div className="flex flex-col gap-4">
-                {postQuery.data?.map((p) => {
+                {postQuery.data?.map((p: any) => {
                   return <PostCard key={p.id} post={p} />;
                 })}
               </div>
@@ -48,6 +48,12 @@ const Home: NextPage = () => {
             )}
           </div>
         </div>
+
+<form >
+        <input type="text" value={''} />
+        <button type="submit"></button>
+        </form>
+
       </main>
     </>
   );
